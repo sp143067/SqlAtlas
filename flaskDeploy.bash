@@ -2,7 +2,7 @@
 
 ################################
 # Name: Sandeep Kumar Paul     #
-# Email: sxp82050@ucmo.edu     #
+# Email: #######@ucmo.edu     #
 ################################
 
 # Referred from: https://linuxize.com/post/how-to-install-flask-on-ubuntu-20-04/
