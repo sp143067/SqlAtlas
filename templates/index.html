@@ -1,0 +1,81 @@
+{% extends 'home.html' %}
+
+{% block head %}
+<title>MySQL Atlas!</title>
+{% endblock %}
+
+
+{% block body %}
+
+
+<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom mynav">
+    <a class="d-flex align-items-center text-dark text-decoration-none" href="/">
+
+        <span class="fs-4 font_ubuntu">SQL Atlas</span>
+    </a>
+
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+
+
+        <a class="me-3 py-2 text-decoration-none" href="home" style="color: white;">Home</a>
+        <a class="me-3 py-2 text-decoration-none" href="#" style="color: white;">AboutUs</a>
+        <a class="me-3 py-2 text-decoration-none" href="/logout" style="color: white;">
+            Logout
+        </a>
+    </nav>
+</div>
+
+
+<div class="container mainbody">
+
+
+    <h1 style="text-align: center;">Greetings , {{session['user_name']}}!</h1>
+    <div class="starhrmark"> <!--  Star-Icon code referred from     https://unicode-table.com/en/2736/-->
+        <div class="starhrmarkline"></div>
+        <span><i>&#10038;</i></span>
+    </div>
+    <table class="index_table">
+        <tr>
+            <td>
+                <form action="/dataframe" method="POST">
+                    <label for="df">Click this button to view the <i><b>Dataframe:</b></i></label> &ensp;
+                    <button class="btn btn-primary" id="df" type="submit">Dataframe</button>
+                </form>
+            </td>
+            <td>
+                <form action="/quick_data_analysis" method="POST">
+                    <label for="report">Click this button to view the <i><b>DataAnalysis report:</b></i></label> &ensp;
+                    <button class="btn btn-primary" id="report" type="submit">DataAnalysis</button>
+                </form>
+            </td>
+        </tr>
+        <tr style="height: 10px !important;background-color: #FFFFFF;">
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td>
+                <form action="/pair_plot" method="POST">
+                    <label for="pair_plot">Click this button to view <i><b>Pairwise relationship in this dataset:</b></i></label> &ensp;
+                    <button class="btn btn-primary" id="pair_plot" type="submit">Pairplot</button>
+                </form>
+            </td>
+            <td>
+                <form action="/describe" method="POST">
+                    <label for="describe">Click this button to <i><b>Generate Descriptive Statistics:</b></i></label>
+                    &ensp;
+                    <button class="btn btn-primary" id="describe" type="submit">Statistics</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<footer class="footer index_footer">
+    <div class="container">
+        <p class="text-muted">Developed By:
+            <a href="#" style="color: white;"> Sandeep Kumar Paul</a>
+        </p>
+    </div>
+</footer>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'home.html' %}
+
+{% block head %}
+<title>MySQL Atlas!</title>
+{% endblock %}
+
+
+{% block body %}
+
+
+<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom mynav">
+    <a class="d-flex align-items-center text-dark text-decoration-none" href="/">
+
+        <span class="fs-4 font_ubuntu">SQL Atlas</span>
+    </a>
+
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 text-decoration-none" href="#" style="color: white;">Home</a>
+        <a class="me-3 py-2 text-decoration-none" href="#" style="color: white;">AboutUs</a>
+    </nav>
+</div>
+
+
+<div class="container mainbody">
+
+    <div class="row">
+
+        <div class="col-md-8">
+            <h1 class="mt_100" style="text-align: justify;"> A distributed system is one in which the failure of a
+                computer you didn't even know existed can render
+                your own computer unusable. </h1>
+            <p style="text-align: right;"><i>~ Leslie Lamport</i></p>
+        </div>
+        <div class="col-md-4">
+            <div class="card mt_60">
+                <div class="card-body">
+                    <form class="form d-grid gap-2" method="post" action="validate_credentials">
+                        <label>Email: </label>
+                        <input class="form-control" type="email" name="email"> <br>
+                        <label>Password: </label>
+                        <input class="form-control" type="password" name="password"> <br>
+                        <input class="btn btn-primary btn-block btn-lg" type="submit" value="Login">
+                    </form>
+
+                    <p class="mt-2">Not registered? <a href="register">Create an account!</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!--        <h1>Welcome to MySQL Atlas!</h1>-->
+
+        <!--        <form action="/dataframe" method="POST">-->
+        <!--            <label for="df">Click the below button to view the choosen dataframe!</label><br><br>-->
+        <!--            <button class="btn btn-primary" id="df" type="submit">Dataframe</button>-->
+
+        <!--        </form>-->
+
+        <!--        <form action="/quick_data_analysis" method="POST">-->
+        <!--            <label for="report">Click the below button to view the DataAnalysis report!</label><br><br>-->
+        <!--            <button class="btn btn-primary" id="report" type="submit">DataAnalysis</button>-->
+        <!--        </form>-->
+    </div>
+
+</div>
+
+<footer class="footer general_footer">
+    <div class="container">
+        <p class="text-muted">Developed By::
+            <a href="#"> Sandeep Kumar Paul</a></p>
+    </div>
+</footer>
+{% endblock %}

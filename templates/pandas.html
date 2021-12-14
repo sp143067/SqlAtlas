@@ -1,0 +1,16 @@
+{% extends 'home.html' %}
+
+{% block head %}
+<title>Pandas DataFrame!</title>
+{% endblock %}
+
+{% block body %}
+<h1>Dataframe of USA_Housing!</h1>
+{% for table in table %}
+<!--{{titles[loop.index]}}-->
+<table class="table table-striped dataframe_table">
+
+</table>
+{{ table|safe }}
+{% endfor %}
+{% endblock %}

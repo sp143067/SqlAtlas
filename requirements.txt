@@ -1,0 +1,7 @@
+pathlib
+Flask>=1.0,<=1.1.2
+pandas
+pandas-profiling
+matplotlib
+seaborn
+pyodbc
